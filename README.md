@@ -11,6 +11,7 @@ Aercord is a vesktop fork meant for Windows Vista (w/ the extended kernel), Wind
 ## Building
 
 Packaging will create builds in the dist/ folder. You can then install them like mentioned above or distribute them
+NOTE: Make sure you have Nodejs and pnpm installed.
 
 ```sh
 git clone https://github.com/Aiek/Aerocord
