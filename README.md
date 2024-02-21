@@ -1,5 +1,3 @@
-in development, ill upload this soon..
-
 # Aercord
 Aercord is a vesktop fork meant for Windows Vista (w/ the extended kernel), Windows 7 and 8. Just like vesktop, it comes with [Vencord](https://github.com/Vendicated/Vencord) pre-installed.
 
