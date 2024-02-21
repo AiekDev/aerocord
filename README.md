@@ -15,8 +15,6 @@ Packaging will create builds in the dist/ folder. You can then install them like
 ```sh
 git clone https://github.com/Aiek/Aerocord
 
-Install an ide such as vscodium, nodejs, npm and pnpm (npm i pnpm)
-
 cd Vesktop
 
 # Install Dependencies
@@ -34,4 +32,4 @@ pnpm package:dir
 
 ## Motivation
 
-The official Discord Desktop app has ended support for windows 7 and 8 in march of 2024, and instead of having to use discord on the web (which means being stuck on supermium), I've decided to start forking popular discord clients and backporting them using win32ss's supermium electron. I've did this to ArmCord, Webcord but vesktop stood out as the best option, therefore I made aerocord based off vesktop
+The official Discord Desktop app has ended support for windows 7 and 8 in march of 2024, and instead of having to use discord on the web (which means being stuck on supermium), I've decided to start forking popular discord clients and backporting them using win32ss's supermium electron. I've did this to ArmCord, Webcord but vesktop stood out as the best option, therefore I made aerocord based off vesktop.
