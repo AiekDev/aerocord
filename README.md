@@ -1,5 +1,5 @@
 # Aerocord
-**yes, i know your vesktop has gotten an update and that i need to fix it, ill add an autoupdater eventually smh, also im working on the new build of aerocord so just you wait
+**yes, i know your vesktop has gotten an update and that i need to fix it, ill add an autoupdater eventually smh, also im working on the new build of aerocord so just you wait**
 
 Aerocord is a vesktop fork meant for Windows Vista (w/ the extended kernel), Windows 7 and 8. Just like vesktop, it comes with [Vencord](https://github.com/Vendicated/Vencord) pre-installed.
 
