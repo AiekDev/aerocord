@@ -13,7 +13,7 @@ Credits to [this guy](https://www.deviantart.com/miltonator/art/Discord-Icon-for
 ## Building
 
 Packaging will create builds in the dist/ folder. You can then install them like mentioned above or distribute them
-NOTE: Make sure you have Nodejs and pnpm installed.
+NOTE: Make sure you have Nodejs installed.
 
 ```sh
 # download aerocord from github and then open it in vscode or vscodium
