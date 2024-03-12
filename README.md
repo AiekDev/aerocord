@@ -16,21 +16,13 @@ Packaging will create builds in the dist/ folder. You can then install them like
 NOTE: Make sure you have Nodejs and pnpm installed.
 
 ```sh
-git clone https://github.com/Aiek/Aerocord
-
-cd Vesktop
+# download aerocord from github and then open it in vscode or vscodium
 
 # Install Dependencies
-pnpm i
+npm i --force
 
-# Either run it without packaging
-pnpm start
-
-# Or package
-pnpm package
-
-# Or package to a directory only
-pnpm package:dir
+# Build it
+npm run package
 ```
 
 After you're done, use win32ss's [supermium-electron](https://github.com/win32ss/supermium-electron/releases) to bring back the windows 7+ support.
