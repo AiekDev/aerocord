@@ -8,7 +8,7 @@ Credits to [this guy](https://www.deviantart.com/miltonator/art/Discord-Icon-for
 
 ## Star History
 
-<a href="https://star-history.com/#Vendicated/Vencord&Timeline">
+<a href="https://star-history.com/#AiekDev/aerocord&Timeline">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=AiekDev/aerocord&type=Timeline&theme=dark" />
     <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=AiekDev/aerocord&type=Timeline" />
