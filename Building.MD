@@ -34,7 +34,7 @@ Error: Cannot find module 'C:\node_modules\npm\bin\npm-prefix.js'
 
 Node.js v22.1.0
 Could not determine Node.js install directory
-```sh
+```
 
 It's really easy to fix, just delete the npm.ps1 and npx.ps1 files from your nodejs install (usually in C:\node32)
 
