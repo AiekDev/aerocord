@@ -16,6 +16,9 @@ Credits to [this guy](https://www.deviantart.com/miltonator/art/Discord-Icon-for
 
 After you're done, use win32ss's [supermium-electron](https://github.com/win32ss/supermium-electron/releases) to bring back the windows 7+ support.
 
+## Documentation
+[Documentation can be found here, it contains common issues and more](https://github.com/AiekDev/aerocord/blob/main/Documentation.MD)
+
 ## Motivation
 
 The official Discord Desktop app has ended support for windows 7 and 8 in march of 2024, and instead of having to use discord on the web (which means being stuck on supermium), I've decided to start forking popular discord clients and backporting them using win32ss's supermium electron. I've did this to ArmCord, Webcord but vesktop stood out as the best option, therefore I made aerocord based off vesktop.
