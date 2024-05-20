@@ -12,7 +12,7 @@ Credits to [this guy](https://www.deviantart.com/miltonator/art/Discord-Icon-for
 -   Global Keybinds
 
 ## Building
-[Building instructions can be found here](https://github.com/AiekDev/aerocord/blob/main/Building.txt)
+[Building instructions can be found here](https://github.com/AiekDev/aerocord/blob/main/Building.md)
 
 After you're done, use win32ss's [supermium-electron](https://github.com/win32ss/supermium-electron/releases) to bring back the windows 7+ support.
 
