@@ -60,6 +60,8 @@ I highly recommend windows 7 for this, i got VS2012 to install on vista with a f
 
 I personally used VS2019 and VS2022 to build but anything else is fine too (if you manage to run .NET 4.5 or higher)
 
+### Building instructions:
+
 1. Open the project, after that go to references and add the following:
 System.IO.Compression
 System.IO.Compression.FileSystem
