@@ -3,7 +3,15 @@
 Aerocord is a [Vesktop](https://github.com/Vencord/Vesktop) fork meant for Windows Vista (w/ the extended kernel), Windows 7 and 8. Just like vesktop, it comes with [Vencord](https://github.com/Vendicated/Vencord) pre-installed.
 I'm currently deving on Aerocord v3.0.0, source code will be uploaded soon
 
-Join up: https://discord.gg/MnfHDJMqX5
+### Main features:
+
+- Vencord preinstalled
+- Much more lightweight and faster than the official Discord app
+- Screenshare has sounds and is smoother than the official Discord app
+- Unlike the official Discord app, Aerocord has backported electron 28 builds
+- Much better privacy, since Discord has no access to your system
+
+Community discord server: https://discord.gg/MnfHDJMqX5
 
 Credits to [this guy](https://www.deviantart.com/miltonator/art/Discord-Icon-for-Windows-and-MacOS-Skeuomorphism-876399496) for aerocord's logo, I did recolor it with a slightly more vibrand hue of blue
 
