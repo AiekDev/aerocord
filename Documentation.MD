@@ -13,6 +13,8 @@ The issue - Screenshare crashing aerocord on electron 28
 
 The answer - I might have an idea to why this happens, for some people it just works (idk how tbh, this issue is quite weird and i told win32 to look into it), but the fix is literally instllaing VxKex which kinda defeats the whole purpose of using aerocord (cuz then u can just use normal vesktop), if you do NOT wanna install vxkex, then try out the electron 22 builds which arent affected by this issue.
 
+The vista emoji issue is also present in windows 7 due do its half baked emoji implementation, aaand i do not feel like repeating myself about it here.
+
 ### 8/8.1 specific:
 ========================================
 
