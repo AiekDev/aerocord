@@ -1,0 +1,77 @@
+<head>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+
+    <style>
+        body {
+            padding: 2em;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Aerocord</h1>
+    <p>
+        Aerocord is a Aerocord fork made to work for Windows Vista (w/ the extended kernel), Windows 7 and 8. This
+        Aerocord
+        fork is being mentained by Aiek @ https://github.com/AiekDev/Aerocord.
+    </p>
+
+    <section>
+        <h2>Aerocord Github:</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/AiekDev/Aerocord" target="_blank">Aerocord Source Code</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Credits to the original Aerocord developer:</h2>
+        <ul>
+            <li>
+                <a href="https://vencord.dev" target="_blank">Vencord Website</a>
+            </li>
+            <li>
+                <a href="https://github.com/Vencord/Vesktop" target="_blank">Vesktop Source Code</a>
+            </li>
+        </ul>
+    </section>
+    <h1 id="title">Documentation</h1>
+    <p>yes, aerocord has documentation intergrated into the client =)))))</p>
+
+    <h2>Vista (with the extended kernel) specific:</h2>
+    <p>========================================</p>
+    <p>The issue - Emojies, and some other characters show up as squares!</p>
+    <p>The answer - You can't really fix this, vista does NOT have any sort of emoji implementation therefore some
+        characters wont show up, i might add in noto emoji fonts (a fix used in supermium) which MIGHT fix some things
+        up, but not all of them sadly.</p>
+    <h2>7 specific:</h2>
+    <p>========================================</p>
+    <p>The issue - Screenshare crashing aerocord on electron 28</p>
+    <p>The answer - I might have an idea to why this happens, for some people it just works (idk how tbh, this issue is
+        quite weird and i told win32 to look into it), but the fix is literally instllaing VxKex which kinda defeats the
+        whole purpose of using aerocord (cuz then u can just use normal vesktop), if you do NOT wanna install vxkex,
+        then try out the electron 22 builds which arent affected by this issue.</p>
+    <p>The vista emoji issue is also present in windows 7 due do its half baked emoji implementation, aaand i do not
+        feel like repeating myself about it here.</p>
+    <h2>8/8.1 specific:</h2>
+    <p>========================================</p>
+    <p>The issue - Aerocord does NOT start up and is stuck on the loading screen!</p>
+    <p>The answer - This is a really weird issue that doesn't happen to the other operating systems, which might make
+        it an electron fault. I've known about this issue for months, and the only way you can fix it is by replacing
+        the "vesktop" folder in Appdata/Roaming with this one, please extract it first</p>
+    <p> Another issue on 8/8.1 is also screenshare crashing aerocord but i've already sort of clarified about it in the
+        windows 7 specific issues, so i wont repeat myself here.</p>
+</body>
+
+<script type="module">
+    const data = await Updater.getData();
+    if (data.currentVersion) {
+        const title = document.getElementById("title");
+
+        title.textContent += ` v${data.currentVersion}`;
+    }
+</script>

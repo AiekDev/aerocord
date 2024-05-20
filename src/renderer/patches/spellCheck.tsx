@@ -1,0 +1,82 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0
+ * Aerocord, a vesktop fork for older microsoft NT releases such as NT 6.0, 6.1, 6.2 and 6.3. 
+ * Credits to vendicated and the rest of the vesktop contribuitors for making Vesktop!
+ */
+
+import { addContextMenuPatch } from "@vencord/types/api/ContextMenu";
+import { findStoreLazy } from "@vencord/types/webpack";
+import { FluxDispatcher, Menu, useStateFromStores } from "@vencord/types/webpack/common";
+
+import { addPatch } from "./shared";
+
+let word: string;
+let corrections: string[];
+
+const SpellCheckStore = findStoreLazy("SpellcheckStore");
+
+// Make spellcheck suggestions work
+addPatch({
+    patches: [
+        {
+            find: ".enableSpellCheck)",
+            replacement: {
+                // if (isDesktop) { DiscordNative.onSpellcheck(openMenu(props)) } else { e.preventDefault(); openMenu(props) }
+                match: /else (.{1,3})\.preventDefault\(\),(.{1,3}\(.{1,3}\))(?<=:(.{1,3})\.enableSpellCheck\).+?)/,
+                // ... else { $self.onSlateContext(() => openMenu(props)) }
+                replace: "else {$self.onSlateContext($1, $3?.enableSpellCheck, () => $2)}"
+            }
+        }
+    ],
+
+    onSlateContext(e: MouseEvent, hasSpellcheck: boolean | undefined, openMenu: () => void) {
+        if (!hasSpellcheck) {
+            e.preventDefault();
+            openMenu();
+            return;
+        }
+
+        const cb = (w: string, c: string[]) => {
+            VesktopNative.spellcheck.offSpellcheckResult(cb);
+            word = w;
+            corrections = c;
+            openMenu();
+        };
+        VesktopNative.spellcheck.onSpellcheckResult(cb);
+    }
+});
+
+addContextMenuPatch("textarea-context", children => {
+    const spellCheckEnabled = useStateFromStores([SpellCheckStore], () => SpellCheckStore.isEnabled());
+    const hasCorrections = Boolean(word && corrections?.length);
+
+    children.push(
+        <Menu.MenuGroup>
+            {hasCorrections && (
+                <>
+                    {corrections.map(c => (
+                        <Menu.MenuItem
+                            id={"vcd-spellcheck-suggestion-" + c}
+                            label={c}
+                            action={() => VesktopNative.spellcheck.replaceMisspelling(c)}
+                        />
+                    ))}
+                    <Menu.MenuSeparator />
+                    <Menu.MenuItem
+                        id="vcd-spellcheck-learn"
+                        label={`Add ${word} to dictionary`}
+                        action={() => VesktopNative.spellcheck.addToDictionary(word)}
+                    />
+                </>
+            )}
+            <Menu.MenuCheckboxItem
+                id="vcd-spellcheck-enabled"
+                label="Enable Spellcheck"
+                checked={spellCheckEnabled}
+                action={() => {
+                    FluxDispatcher.dispatch({ type: "SPELLCHECK_TOGGLE" });
+                }}
+            />
+        </Menu.MenuGroup>
+    );
+});
