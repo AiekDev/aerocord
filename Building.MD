@@ -9,10 +9,14 @@ Lets focus on the client itself for now
 =======================================
 1. Installing the dependencies:
 Its important you use the "--force" flag here
+```sh
 npm i --force
+```
 
 2. Building
+```sh
 npm run package
+```
 
 Common errors in step 2:
 1. This:
@@ -39,7 +43,9 @@ Could not determine Node.js install directory
 It's really easy to fix, just delete the npm.ps1 and npx.ps1 files from your nodejs install (usually in C:\node32)
 
 2. If it gives an error about pnpm NOT being installed or it installed the wrong version (newer than pnpm 8.11.0), then execute the following command
+```sh
 npm install pnpm@8.11.0
+```
 
 Vendicated, i have no fucking idea why you didnt just use bun if you really wanted speed.. I might migrate this source code to bun one day
 
