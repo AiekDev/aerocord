@@ -9,8 +9,8 @@ I'm currently deving on Aerocord v3.0.0, source code will be uploaded soon
 - Much more lightweight and faster than the official Discord app
 - Screenshare has sounds and is smoother than the regular Discord app
 - Unlike the Discord, Aerocord has backported electron 28 builds which is more up to date compared to discord's electron 22 builds
-- It's just vesktop really, but it's actually supported by a somewhat competent developer
-- Aerocord has it's own updater separate from vesktop, the updater is also consent-only meaning it wont update without permission
+- Any patch done on vesktop will be also be backported to aerocord in about 1 week
+- Aerocord has its own updater separate from vesktop, the updater is also consent-only meaning it wont update without permission
 - Much better privacy, since Discord has no access to your system
 
 Community discord server: https://discord.gg/MnfHDJMqX5
