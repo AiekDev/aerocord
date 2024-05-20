@@ -63,8 +63,11 @@ I personally used VS2019 and VS2022 to build but anything else is fine too (if y
 ### Building instructions:
 
 1. Open the project, after that go to references and add the following:
+
 System.IO.Compression
+
 System.IO.Compression.FileSystem
+
 2. I think you're done after that, you should be able to build it 
 
 Good luck building aerocord! If something doesnt work js let me know by making an issue on github
