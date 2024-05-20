@@ -34,7 +34,7 @@ Error: Cannot find module 'C:\node_modules\npm\bin\npm-prefix.js'
 Node.js v22.1.0
 Could not determine Node.js install directory
 
-It's really easy to fix, just delete the npm.ps1 and npx.ps1 files
+It's really easy to fix, just delete the npm.ps1 and npx.ps1 files from your nodejs install (usually in C:\node32)
 
 2. If it gives an error about pnpm NOT being installed or it installed the wrong version (newer than pnpm 8.11.0), then execute the following command
 npm install pnpm@8.11.0
@@ -44,13 +44,15 @@ Vendicated, i have no fucking idea why you didnt just use bun if you really want
 3. Any other errors you can just submit on my github as an issue
 =======================================
 
+
+
 Lets build the C# updater:
 =======================================
 I highly recommend windows 7 for this, i got VS2012 to install on vista with a few workarounds but still
 
 I personally used VS2019 and VS2022 to build but anything else is fine too (if you manage to run .NET 4.5 or higher)
 
-1. Install and open the project, after that go to references and add the following:
+1. Open the project, after that go to references and add the following:
 System.IO.Compression
 System.IO.Compression.FileSystem
 2. I think you're done after that, you should be able to build it 
