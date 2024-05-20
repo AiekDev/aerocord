@@ -42,6 +42,8 @@ npm install pnpm@8.11.0
 Vendicated, i have no fucking idea why you didnt just use bun if you really wanted speed.. I might migrate this source code to bun one day
 
 3. Any other errors you can just submit on my github as an issue
+
+After building, go into /dist/wim-unpacked (or whatever its called), and then go into resources, copy app.asar and use win32's [supermium-electron(https://github.com/win32ss/supermium-electron/releases) to bring back the windows 7+ support. (Delete the other app.asar in supermiun-electron)
 =======================================
 
 
@@ -58,4 +60,4 @@ System.IO.Compression.FileSystem
 2. I think you're done after that, you should be able to build it 
 =======================================
 
-Good luck building aerocord! If something doesnt work js let me know by making an issue
+Good luck building aerocord! If something doesnt work js let me know by making an issue on github
