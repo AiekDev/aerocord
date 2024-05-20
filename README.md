@@ -15,7 +15,7 @@ I'm currently deving on Aerocord v3.0.0, source code will be uploaded soon
 
 Community discord server: https://discord.gg/MnfHDJMqX5
 
-Credits to [this guy](https://www.deviantart.com/miltonator/art/Discord-Icon-for-Windows-and-MacOS-Skeuomorphism-876399496) for aerocord's logo, I did recolor it with a slightly more vibrand hue of blue
+Credits to [this guy](https://www.deviantart.com/miltonator/art/Discord-Icon-for-Windows-and-MacOS-Skeuomorphism-876399496) for aerocord's logo, I did recolor it with a slightly more vibrant hue of blue
 
 **Not yet supported**:
 
