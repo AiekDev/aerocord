@@ -4,7 +4,7 @@
  * Credits to vendicated and the rest of the vesktop contribuitors for making Vesktop!
  */
 
-// vendicated, this code is terrible, how the fuck do you make such a bad autoupdater??? smh.. im just gonna redo this using a custom C# updater
+// lets just use our own c# updater cuz why not
 import { app, BrowserWindow, shell } from "electron";
 import { Settings, State } from "main/settings";
 import { handle } from "main/utils/ipcWrappers";
@@ -14,7 +14,7 @@ import { join } from "path";
 import { IpcEvents } from "shared/IpcEvents";
 import { ICON_PATH, VIEW_DIR } from "shared/paths";
 
-interface UpdateData {
+export interface UpdateData {
     currentVersion: string;
     latestVersion: string;
     release: ReleaseData;
@@ -23,19 +23,8 @@ interface UpdateData {
 let updateData: UpdateData;
 
 handle(IpcEvents.UPDATER_GET_DATA, () => updateData);
-
 handle(IpcEvents.UPDATER_DOWNLOAD, () => {
-    const portable = !!process.env.PORTABLE_EXECUTABLE_FILE;
-
-    const { assets } = updateData.release;
-    const url = assets.find(a => {
-        if (!a.name.endsWith(".exe")) return false;
-
-        const isSetup = a.name.includes("Setup");
-        return portable ? !isSetup : isSetup;
-    })!.browser_download_url;
-
-    const updaterPath = join(app.getAppPath(), 'Updater.exe');
+    const updaterPath = join(app.getPath('exe'), '..', 'Updater.exe')
     shell.openPath(updaterPath);
 });
 
@@ -83,7 +72,7 @@ export async function checkUpdates() {
             openNewUpdateWindow();
         }
     } catch (e) {
-        console.error("failed to check for updates\n", e);
+        console.error("AppUpdater: Failed to check for updates\n", e);
     }
 }
 
@@ -93,7 +82,7 @@ function openNewUpdateWindow() {
         autoHideMenuBar: true,
         alwaysOnTop: true,
         webPreferences: {
-            preload: join(app.getAppPath(), "updaterPreload.js"),
+            preload: join(__dirname, "updaterPreload.js"),
             nodeIntegration: false,
             contextIsolation: true,
             sandbox: true
@@ -103,12 +92,5 @@ function openNewUpdateWindow() {
 
     makeLinksOpenExternally(win);
 
-    win.loadFile(join(app.getAppPath(), "updater.html"));
-
-    win.webContents.on('ipc-message', (event, channel) => {
-        if (channel === 'update-agree') {
-            const updaterPath = join(app.getAppPath(), 'Updater.exe');
-            shell.openPath(updaterPath);
-        }
-    });
+    win.loadFile(join(VIEW_DIR, "updater.html"));
 }

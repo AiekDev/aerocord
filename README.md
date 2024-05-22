@@ -1,6 +1,6 @@
 # Aerocord
 
-Aerocord is a [Vesktop](https://github.com/Vencord/Vesktop) fork meant for Windows Vista (w/ the extended kernel), Windows 7 and 8. Just like vesktop, it comes with [Vencord](https://github.com/Vendicated/Vencord) pre-installed.
+Aerocord is a [Vesktop](https://github.com/AiekDev/Aerocord) fork meant for Windows Vista (w/ the extended kernel), Windows 7 and 8. Just like vesktop, it comes with [Vencord](https://github.com/Vendicated/Vencord) pre-installed.
 
 ### Main features:
 

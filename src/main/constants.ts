@@ -38,7 +38,7 @@ export const VENCORD_THEMES_DIR = join(DATA_DIR, "themes");
 export const VENCORD_FILES_DIR =
     (require("./settings") as typeof import("./settings")).Settings.store.vencordDir || join(DATA_DIR, "vencordDist");
 
-export const USER_AGENT = `Vesktop/${app.getVersion()} (https://github.com/Vencord/Vesktop)`;
+export const USER_AGENT = `Vesktop/${app.getVersion()} (https://github.com/AiekDev/Aerocord)`;
 
 // dimensions shamelessly stolen from Discord Desktop :3
 export const MIN_WIDTH = 940;
